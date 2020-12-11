@@ -2,8 +2,9 @@ const players = document.getElementById("players")
 const playersForm = document.getElementById("player-form")
 
 
-const played = [{name: "Ronaldo", number: 10}, {name:"Messi", number: 10}]
+const played = [{name: "Ronaldo", number: 10}, {name:"Messi", number: 9}]
 
+// display players
 function showPlayers(player) {
     for (let i = 0; i < player.length; i++){
         displayPlayers(player[i])
@@ -17,6 +18,15 @@ function displayPlayers(player){
     players.appendChild(li)
 }
 
+// get players from database
+fetch("http://localhost:3000/players")
+    .then(function (rsp) {
+        return rsp.json()
+    })
+    .then(function(obj){
+       showPlayers(obj)
+})
+
 playersForm.addEventListener("submit", addPlayer)
 
 function addPlayer(e){
@@ -28,4 +38,8 @@ function addPlayer(e){
 }
 
 
-showPlayers(played)
+ 
+
+
+
+
