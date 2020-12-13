@@ -1,8 +1,8 @@
+const URL = "http://localhost:3000"
+const PLAYERURL = `${URL}/players`
+
 const players = document.getElementById("players")
 const playersForm = document.getElementById("player-form")
-
-
-const played = [{name: "Ronaldo", number: 10}, {name:"Messi", number: 9}]
 
 // display players
 function showPlayers(player) {
@@ -13,13 +13,22 @@ function showPlayers(player) {
 }
 
 function displayPlayers(player){
-    let li = document.createElement('li'); 
-    li.innerHTML = `${player.name}, ${player.number}`
-    players.appendChild(li)
+    // let li = document.createElement('li');
+    let p = document.createElement('p');
+    let card = document.createElement('div') 
+    let deleteButton = document.createElement('button')
+    deleteButton.innerHTML = 'delete'
+    // card.className = "card"
+    // li.innerHTML = `${player.name}, ${player.number}`
+    p.innerHTML = `${player.number}. ${player.name} `
+    p.className = "input-text"
+    // deleteButton.addEventListener('click')
+    card.append(p, deleteButton)
+    players.append(card)
 }
 
 // get players from database
-fetch("http://localhost:3000/players")
+fetch(PLAYERURL)
     .then(function (rsp) {
         return rsp.json()
     })
@@ -35,11 +44,29 @@ function addPlayer(e){
     player.name = e.target[0].value
     player.number = e.target[1].value
     displayPlayers(player)
+    savePlayer(player)
+}
+
+
+
+function savePlayer(player){
+    let configObj = {
+    method: "POST",
+    headers: {
+        "content-type": "application/json",
+        "Accept": "application/json"
+    },
+    body: JSON.stringify({
+        name: player.name,
+        number: player.number
+    })
+    };
+    fetch(PLAYERURL, configObj)
 }
 
 
  
 
-
+// showPlayers(played)
 
 
