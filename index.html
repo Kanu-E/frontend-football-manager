@@ -3,30 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Match Day</title>
+    <title>game Day</title>
     <link rel="stylesheet" href="index.css" />
 </head>
 <body>
     <div id="container">
         <form id="player-form">
             <h3>Add a New Player!</h3>
-          Players Name: 
-          <input type="text" name="name" value="" placeholder="Enter player's name..." />
-          Players Number: 
-          <input type="text" name="number" value="" placeholder="Enter player's number..." />
-          <br />
-          <input type="submit" value="Add Player">
+                 Players Name: 
+            <input type="text" name="name" value="" placeholder="Enter player's name..." />
+                Players Number: 
+            <input type="text" name="number" value="" placeholder="Enter player's number..." />
+                <br />
+            <input type="submit" value="Add Player">
         </form>
     </div>
-    <br>
+ 
     <div id= "players-container">
         <div id="players">
 
         </div>
-        <br>
     </div>
-    <div id="starters">
-        STARTERS
+    <div id="game">
+        <h3>Create Game!</h3>
+            Game Name: 
+        <form id="game-form">
+            <input type="text" name="name" value="" placeholder="Enter game name..." />
+            <br />
+            <input type="submit" value="Add Game">
+        </form>
+        <div id="games">
+            
+        </div>
     </div>
     <script src="./src/index.js"></script>
 </body>
