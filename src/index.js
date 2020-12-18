@@ -9,8 +9,13 @@ const games = document.getElementById("games")
 // form to create new player
 
 playersForm.addEventListener("submit", Player.submitPlayer)
+gamesForm.addEventListener("submit", Game.submitGame)
+
+
 Player.fetchPlayers()
-console.log(Player.allPlayers)
+Game.fetchGames()
+
+// console.log(Player.allPlayers)
 
 // function addPlayer(e){
 //     e.preventDefault()
@@ -173,13 +178,13 @@ console.log(Player.allPlayers)
 //     playerSelect.append(x)
 // }
 
-// function showPlayerToSelect(e){
-// console.log(e.target)
-// }
+function showPlayerToSelect(e){
+console.log(e.target)
+}
 
-// function stopShowPlayerToSelect(e){
-//     console.log(e.target.value)
-// }
+function stopShowPlayerToSelect(e){
+    console.log(e.target.value)
+}
 // fetchGames()
 // fetchPlayers()
 
