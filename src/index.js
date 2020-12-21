@@ -197,18 +197,18 @@ function stopShowPlayerToSelect(e){
 
 
 function choosePlayer(e){
-    let oooo = document.getElementById('oooo')
-    if (oooo){
-        oooo.id = null
+    let selectedPosition = document.getElementById('selected-position')
+    if (selectedPosition){
+        selectedPosition.id = null
     }
   
-    e.target.id = "oooo"
+    e.target.id = "selected-position"
     
 }
 
 function selectThis(e){
-    let oooo = document.getElementById('oooo')
-    console.log(e.target.previousElementSibling.previousElementSibling.value)
-    console.log(oooo)
+    let selectedPosition = document.getElementById('selected-position')
+    selectedPosition.innerHTML = e.target.previousElementSibling.value
+    // selectedPosition.innerHTML = e.target.value
 }
 

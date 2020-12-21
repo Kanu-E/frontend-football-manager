@@ -30,7 +30,7 @@ class Player {
         p.className = "input-text"
         deleteButton.addEventListener('click', this.deletePlayer)
         // console.log(this)
-        card.append(p, deleteButton, addPlayerButton);
+        card.append(p, addPlayerButton, deleteButton);
         players.append(card);
     }
 
