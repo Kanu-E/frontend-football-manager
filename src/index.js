@@ -1,11 +1,10 @@
 const URL = "http://localhost:3000"
 const playerURL = `${URL}/players`
 const gameURL = `${URL}/games`
-const players = document.getElementById("players")
+// const players = document.getElementById("players")
 const playersForm = document.getElementById("player-form")
 const gamesForm = document.getElementById("game-form")
-const games = document.getElementById("games")
-
+// const games = document.getElementById("games")
 // form to create new player
 
 playersForm.addEventListener("submit", Player.submitPlayer)
@@ -178,15 +177,35 @@ Game.fetchGames()
 //     playerSelect.append(x)
 // }
 
-function showPlayerToSelect(e){
-console.log(e.target)
-}
+// function showPlayerToSelect(e){
+// // console.log(e.target.childNodes[1])
+
+//     let players = e.target.childNodes[1]
+ 
+//         players.style.display = "block";
+
+// }
 
 function stopShowPlayerToSelect(e){
-    console.log(e.target.value)
+   console.log(e.target)
+    // players.style.display = "none"
 }
 // fetchGames()
 // fetchPlayers()
 
 // choosePlayer()
+
+
+function choosePlayer(e){
+    let oooo = document.getElementById('oooo')
+    if (oooo){
+        oooo.id = null
+    }
+  
+    e.target.id = "oooo"
+    
+}
+
+
+
 

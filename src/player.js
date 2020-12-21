@@ -25,7 +25,7 @@ class Player {
         p.innerHTML = `${this.number}. ${this.name}`
         p.className = "input-text"
         deleteButton.addEventListener('click', this.deletePlayer)
-        console.log(this)
+        // console.log(this)
         card.append(p, deleteButton);
         players.append(card);
     }
@@ -36,7 +36,7 @@ class Player {
         .then (rsp => rsp.json())
         .then(players =>{
             for(let player of players){
-                let newPlayer = new Player(player)
+                 new Player(player)
             }
             this.renderPlayers()
         })
@@ -71,4 +71,5 @@ class Player {
             {method: "DELETE"})
             this.parentElement.remove()
     }
+    
 }

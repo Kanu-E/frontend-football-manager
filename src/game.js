@@ -31,19 +31,19 @@ class Game {
         team.append(teamH4)
             for (let i = 0; i < 11;  i++) {
                 const playerSelect = document.createElement('div')
-                playerSelect.addEventListener('mouseover', showPlayerToSelect)
-                playerSelect.addEventListener('mouseOut', stopShowPlayerToSelect) 
-                playerSelect.id = 'player'
+                playerSelect.addEventListener('click', choosePlayer)
+                // playerSelect.addEventListener('mouseOut', stopShowPlayerToSelect) 
+                // playerSelect.id = 'player'
                 playerSelect.innerHTML = `Select Player ${i + 1}`
-                let playerChoice = document.createElement('div')
-                for (let player of Player.allPlayers){
-                    let newp = document.createElement('p')
-                    newp.value = player
-                    newp.innerText = player.name
-                    playerChoice.appendChild(newp)
-                    playerChoice.className = 'player-choice'
-                }
-                playerSelect.appendChild(playerChoice)
+                let playerChoices = document.createElement('div')
+                // for (let player of Player.allPlayers){
+                //     let playerChoice = document.createElement('p')
+                //     playerChoice.value = player
+                //     playerChoice.innerText = player.name
+                //     playerChoices.appendChild(playerChoice)
+                //     playerChoices.className = 'player-choice'
+                // }
+                // playerSelect.appendChild(playerChoices)
                 team.append (playerSelect)
             }
             // console.log(playerSelect)
