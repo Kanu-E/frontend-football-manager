@@ -206,6 +206,9 @@ function choosePlayer(e){
     
 }
 
-
-
+function selectThis(e){
+    let oooo = document.getElementById('oooo')
+    console.log(e.target.previousElementSibling.previousElementSibling.value)
+    console.log(oooo)
+}
 

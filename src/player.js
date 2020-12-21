@@ -20,13 +20,17 @@ class Player {
         let card = document.createElement('div');
         let deleteButton = document.createElement('button');
         deleteButton.innerHTML = 'delete'
+        let addPlayerButton = document.createElement('button');
+        addPlayerButton.innerHTML = 'Add Player'
+        addPlayerButton.addEventListener('click', selectThis)
         p.dataset.id = this.id
+        p.value= this.name
         card.className = "card"
         p.innerHTML = `${this.number}. ${this.name}`
         p.className = "input-text"
         deleteButton.addEventListener('click', this.deletePlayer)
         // console.log(this)
-        card.append(p, deleteButton);
+        card.append(p, deleteButton, addPlayerButton);
         players.append(card);
     }
 
