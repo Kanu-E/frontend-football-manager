@@ -23,6 +23,7 @@ class Player {
         let addPlayerButton = document.createElement('button');
         addPlayerButton.innerHTML = 'Add Player'
         addPlayerButton.addEventListener('click', selectThis)
+        addPlayerButton.className = 'add-btn'
         p.dataset.id = this.id
         p.value= this.name
         card.className = "card"
