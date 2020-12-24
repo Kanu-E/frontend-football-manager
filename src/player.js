@@ -22,7 +22,7 @@ class Player {
         deleteButton.innerHTML = 'delete'
         let addPlayerButton = document.createElement('button');
         addPlayerButton.innerHTML = 'Add Player'
-        addPlayerButton.addEventListener('click', selectThis)
+        addPlayerButton.addEventListener('click', Game.updateGame)
         addPlayerButton.className = 'add-btn'
         p.dataset.id = this.id
         p.value= this.name
