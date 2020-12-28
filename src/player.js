@@ -22,10 +22,10 @@ class Player {
         deleteButton.innerHTML = 'delete'
         let addPlayerButton = document.createElement('button');
         addPlayerButton.innerHTML = 'Add Player'
-        addPlayerButton.addEventListener('click', Game.updateGame)
+        addPlayerButton.addEventListener('click', Roster.updateRoster)
         addPlayerButton.className = 'add-btn'
         p.dataset.id = this.id
-        p.value= this.name
+        p.value= `${this.number}. ${this.name}` 
         card.className = "card"
         p.innerHTML = `${this.number}. ${this.name}`
         p.className = "input-text"

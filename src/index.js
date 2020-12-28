@@ -1,6 +1,7 @@
 const URL = "http://localhost:3000"
 const playerURL = `${URL}/players`
 const gamesURL = `${URL}/games`
+const rostersURL = `${URL}/rosters`
 // const players = document.getElementById("players")
 const playersForm = document.getElementById("player-form")
 const gamesForm = document.getElementById("game-form")
