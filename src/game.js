@@ -91,7 +91,7 @@ class Game {
                             //  console.log(.name)
                             playerSelect.innerHTML = `${player.number}. ${player.name}`
                         }
-                   
+                    playerSelect.addEventListener('click', Roster.selectPlayer)
                     team.appendChild(playerSelect)
                 }      
         h2.innerHTML = this.name
