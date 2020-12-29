@@ -33,10 +33,10 @@ class Roster{
 
     static selectPlayer(){
         let selectedPosition = document.getElementById('selected-position')
-        let y = this.parentElement.parentElement.rosters
-        console.log(this.parentElement.parentElement.players)
-        console.log(this.parentElement.parentElement.rosters)
-        console.log (y)
+        // let y = this.parentElement.parentElement.rosters
+        // console.log(this.parentElement.parentElement.players)
+        // console.log(this.parentElement.parentElement.rosters)
+        // console.log (y)
       
         if (selectedPosition){
             selectedPosition.id = null
@@ -48,10 +48,31 @@ class Roster{
 
     }
     static updateRoster(){
+        // console.log(this.parentElement.dataset.id)
+        // console.log(this)
         let selectedPosition = document.getElementById('selected-position')
+        // console.log(selectedPosition.parentElement.parentElement)
+        // console.log(selectedPosition)
+        // console.log(selectedPosition.rosterId)
             if  (selectedPosition){
-                selectedPosition.innerHTML = this.previousElementSibling.value
+                let id = selectedPosition.rosterId
+                if (id){
+                    fetch(`${rostersURL}/${id}`,{
+                        method: "PATCH",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                          },
+                          body: JSON.stringify({
+                            player_id: this.parentElement.dataset.id,
+                            game_id: selectedPosition.parentElement.parentElement.dataset.id,
+                            position: selectedPosition.dataset.id
+                          }), 
+                    })
+                }
+ 
+            selectedPosition.innerHTML = this.parentElement.value
             }
-    }
+    }    
 
 }

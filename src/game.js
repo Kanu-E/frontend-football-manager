@@ -88,8 +88,10 @@ class Game {
                         let roster = gameDiv.rosters.find (function(s) {return s.position == playerSelect.dataset.id})                     
                         if (roster) {
                             let player = gameDiv.players.find (function(s) {return s.id == roster.player_id})
-                            //  console.log(.name)
+                            //  console.log(roster.id)
                             playerSelect.innerHTML = `${player.number}. ${player.name}`
+                            playerSelect.rosterId = roster.id
+                            console.log(playerSelect.rosterId) 
                         }
                     playerSelect.addEventListener('click', Roster.selectPlayer)
                     team.appendChild(playerSelect)

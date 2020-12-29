@@ -24,8 +24,8 @@ class Player {
         addPlayerButton.innerHTML = 'Add Player'
         addPlayerButton.addEventListener('click', Roster.updateRoster)
         addPlayerButton.className = 'add-btn'
-        p.dataset.id = this.id
-        p.value= `${this.number}. ${this.name}` 
+        card.dataset.id = this.id
+        card.value= `${this.number}. ${this.name}` 
         card.className = "card"
         p.innerHTML = `${this.number}. ${this.name}`
         p.className = "input-text"
