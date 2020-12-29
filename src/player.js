@@ -18,12 +18,13 @@ class Player {
     renderPlayer(){
         let p = document.createElement('p');
         let card = document.createElement('div');
-        let deleteButton = document.createElement('button');
-        deleteButton.innerHTML = 'delete'
         let addPlayerButton = document.createElement('button');
         addPlayerButton.innerHTML = 'Add Player'
         addPlayerButton.addEventListener('click', Roster.updateRoster)
         addPlayerButton.className = 'add-btn'
+        let deleteButton = document.createElement('button');
+        deleteButton.innerHTML = 'Delete'
+        deleteButton.className = "delete"
         card.dataset.id = this.id
         card.value= `${this.number}. ${this.name}` 
         card.className = "card"
