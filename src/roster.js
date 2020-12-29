@@ -70,6 +70,20 @@ class Roster{
                           }), 
                     })
                 }
+                else{
+                    fetch(`${rostersURL}`,{
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                          },
+                          body: JSON.stringify({
+                            player_id: this.parentElement.dataset.id,
+                            game_id: selectedPosition.parentElement.parentElement.dataset.id,
+                            position: selectedPosition.dataset.id
+                          }), 
+                    })
+                }
  
             selectedPosition.innerHTML = this.parentElement.value
             }
