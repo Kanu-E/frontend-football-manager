@@ -91,7 +91,7 @@ class Game {
                             //  console.log(roster.id)
                             playerSelect.innerHTML = `${player.number}. ${player.name}`
                             playerSelect.rosterId = roster.id
-                            console.log(playerSelect.rosterId) 
+                            // console.log(playerSelect.rosterId) 
                         }
                     playerSelect.addEventListener('click', Roster.selectPlayer)
                     team.appendChild(playerSelect)

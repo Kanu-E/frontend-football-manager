@@ -78,13 +78,15 @@ class Roster{
                             "Accept": "application/json"
                           },
                           body: JSON.stringify({
+                            id: selectedPosition.rosterId,
                             player_id: this.parentElement.dataset.id,
                             game_id: selectedPosition.parentElement.parentElement.dataset.id,
                             position: selectedPosition.dataset.id
                           }), 
                     })
+                    // location.reload()
                 }
- 
+                selectedPosition.rosterId
             selectedPosition.innerHTML = this.parentElement.value
             }
     }    
