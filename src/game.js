@@ -42,7 +42,7 @@ class Game {
         gameDiv.rosters = this.rosters
         const team = document.createElement('div')
         const teamH4 = document.createElement('h4') 
-        team.append(teamH4)
+        gameDiv.append(h2, teamH4)
         // console.log(gameDiv.id)
                 // const player1 = document.createElement('div')
                 // // player1.addEventListener('click', this.choosePlayer)
@@ -94,11 +94,12 @@ class Game {
                             // console.log(playerSelect.rosterId) 
                         }
                     playerSelect.addEventListener('click', Roster.selectPlayer)
-                    team.appendChild(playerSelect)
+                    playerSelect
+                    gameDiv.append(playerSelect)
                 }      
         h2.innerHTML = this.name
         teamH4.innerHTML = 'Team'
-        gameDiv.append(h2, team)
+        
         games.appendChild(gameDiv)
         }
     static submitGame(){

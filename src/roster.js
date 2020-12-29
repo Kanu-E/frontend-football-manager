@@ -65,7 +65,7 @@ class Roster{
                           },
                           body: JSON.stringify({
                             player_id: this.parentElement.dataset.id,
-                            game_id: selectedPosition.parentElement.parentElement.dataset.id,
+                            game_id: selectedPosition.parentElement.dataset.id,
                             position: selectedPosition.dataset.id
                           }), 
                     })
@@ -80,7 +80,7 @@ class Roster{
                           body: JSON.stringify({
                             id: selectedPosition.rosterId,
                             player_id: this.parentElement.dataset.id,
-                            game_id: selectedPosition.parentElement.parentElement.dataset.id,
+                            game_id: selectedPosition.parentElement.dataset.id,
                             position: selectedPosition.dataset.id
                           }), 
                     })
