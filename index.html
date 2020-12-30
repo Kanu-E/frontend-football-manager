@@ -8,27 +8,35 @@
 </head>
 <body>
     <div id="container">
-        <form id="player-form">
+        <form id="player-form" class = "player-form">
             <h3>Add a New Player!</h3>
-                 Players Name: 
-            <input type="text" name="name" value="" placeholder="Enter player's name..." />
-                Players Number: 
-            <input type="text" name="number" value="" placeholder="Enter player's number..." />
+                 Players Name: <br>
+            <input type="text" name="name" value="" placeholder="Enter player's name..." /><br>
+                Players Number: <br>
+            <input type="text" name="number" value="" placeholder="Enter player's number..." /><br>
                 <br />
-            <input type="submit" value="Add Player">
+            <input type="submit" value="Create Player">
         </form>
     </div>
- 
-    <div id= "players-container">
-        <div id="players">
+
+    <div id= "players-container" class="players-container">
+        <div id="players" class="players">
 
         </div>
     </div>
+
+
+    <br>
+</br>
     <div id="game">
+        <p>
+
+        </p>
+        <br>
         <h3>Create Game!</h3>
           
-        <form id="game-form">
-            Game Name: 
+        <form id="game-form" class="game-form">
+            Game Name: <br>
             <input type="text" name="name" value="" placeholder="Enter game name..." />
             <br />
             <input type="submit" value="Add Game">
@@ -37,6 +45,7 @@
             
         </div>
     </div>
+    <link rel="stylesheet" href="index.css" />
     <script src="./src/game.js"></script>
     <script src="./src/player.js"></script>
     <script src="./src/roster.js"></script>

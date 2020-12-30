@@ -1,25 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #707275; 
+  font-family: baskerville;
+}
 
-/*   
-.player-choice {
+div {
+  display: grid;
+  grid-gap: 1px;
+  padding: 20px;
+  background-color: #a4a6a8;
+}
+  
+.player-form {
+  background-color: #a4a6a8;
+  border: 2em solid #ccc;
+  border-color: #707275; 
+  padding: 2em;
+  }
 
-    display: none;
- 
-  } */
-
-  /* .add-btn {
-
-    display: none;
- 
-  }  */
+  .game-form{
+    background-color: #a4a6a8;
+    border: 2em solid #ccc;
+    border-color: #707275; 
+    padding: 2em;
+  }
 
   button {
-    font-size: .65em;
-    color: #fff;
-    background-color: green;
-    border-radius: 10px;
+    font-size: .75em;
+    
+    padding: 6px 15px;
+    background-color:  #4CAF50;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button:hover {
+    font-size: .95em;
+    background-color: #45a049;
   }
   
   .delete {
-    float: right;
     background-color: #E1332D;
   }
+  
+  .delete:hover {
+    font-size: .95em;
+    background-color: #dd1a13;
+  }
+
+  input[type=text], select {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #a4a6a8
+  }
+  
+  input[type=submit] {
+    width: 25%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .players{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+ 
+  .card{
+    border-radius: 5px;
+    background-color: #707275;
+    box-shadow: 10px 10px grey;
+    width: 12%;
+    height: 140px;
+  }
+  .game-card{
+    border-radius: 5px;
+    background-color: #707275;
+    box-shadow: 10px 10px grey;
+    width: 22.7%;
+    height: 800px;
+  }
+
+
+
+  
+

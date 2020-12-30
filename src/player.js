@@ -21,7 +21,6 @@ class Player {
         let addPlayerButton = document.createElement('button');
         addPlayerButton.innerHTML = 'Add Player'
         addPlayerButton.addEventListener('click', Roster.updateRoster)
-        addPlayerButton.className = 'add-btn'
         let deleteButton = document.createElement('button');
         deleteButton.innerHTML = 'Delete'
         deleteButton.className = "delete"

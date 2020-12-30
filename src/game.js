@@ -19,7 +19,7 @@ class Game {
         Game.allGames.push(this)
     }
     static renderGames(){
-        for( let game of this.allGames){
+        for( let game of this.allGames.reverse()){
             game.renderGame()
         }
     }
@@ -96,6 +96,7 @@ class Game {
                     playerSelect.addEventListener('click', Roster.selectPlayer)
                     playerSelect
                     gameDiv.append(playerSelect)
+                    gameDiv.className = 'game-card'
                 }      
         h2.innerHTML = this.name
         teamH4.innerHTML = 'Team'
