@@ -98,6 +98,81 @@ div {
     height: 800px;
   }
 
+  .game-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+  }
+
+  .pitch{
+    background-color: #238729;
+    width: 900.5px;
+    height: 580px;
+    border: 30px solid #ccc;
+    border-radius: 4px;
+   border-top: 130px solid #ccc;
+   border-bottom: 130px solid #ccc;
+   border-color:  #707275 ;
+  }
+
+  .field{
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid white;
+  }
+
+  .center-line{
+    float: right;
+    height: 100%;
+    width: 50%;
+    border-left: 1px solid white;
+  }
+
+  .center-circle{
+    position: absolute;
+    top: 37%;
+    left: 42.3%;
+    width: 120px;
+    height: 120px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.center-circle:after{
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    width: 2px;
+    height: 2px;
+    background-color:white;
+    content:"";
+    border:1px solid white;
+    border-radius: 50%;
+}
+
+.penalty-box-left{
+  position: absolute;
+  top: 30%; 
+  width: 15%;
+  height: 35%;
+  border: 1px solid white;
+  border-left: none;
+}
+
+.penalty-box-right{
+  position: absolute;
+  left: 85%;
+  top: 30%; 
+  width: 15%;
+  height: 35%;
+  border: 1px solid white;
+  border-right: none;
+}
+
+
+
 
 
   

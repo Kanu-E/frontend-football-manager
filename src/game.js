@@ -97,11 +97,29 @@ class Game {
                     playerSelect
                     gameDiv.append(playerSelect)
                     gameDiv.className = 'game-card'
-                }      
+                }  
+                const pitch = document.createElement('section') 
+                const field = document.createElement('section') 
+                const centerLine = document.createElement('section') 
+                centerLine.className = 'center-line'
+                const centerCircle = document.createElement('section') 
+                centerCircle.className = 'center-circle'
+                const penaltyBoxLeft = document.createElement('section') 
+                penaltyBoxLeft.className = 'penalty-box-left'
+                const penaltyBoxRight = document.createElement('section') 
+                penaltyBoxRight.className = 'penalty-box-right'
+                field.append(centerLine, centerCircle, penaltyBoxLeft, penaltyBoxRight) 
+                
+        const section = document.createElement('section')
+        section.className = "game-section"
         h2.innerHTML = this.name
         teamH4.innerHTML = 'Team'
-        
-        games.appendChild(gameDiv)
+        pitch.className = 'pitch'
+        field.className = "field"
+
+        pitch.appendChild(field)
+        section.append(gameDiv, pitch)
+        games.appendChild(section)
         }
     static submitGame(){
         event.preventDefault()
