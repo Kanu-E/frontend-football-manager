@@ -71,7 +71,8 @@ class Player {
     }
 
    deletePlayer(){
-        const playerId = this.previousElementSibling.dataset.id
+       console.log(this.parentElement)
+        const playerId = this.parentElement.dataset.id
             fetch(`${playerURL}/${playerId}`, 
             {method: "DELETE"})
             this.parentElement.remove()
