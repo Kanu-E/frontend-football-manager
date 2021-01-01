@@ -1,22 +1,22 @@
-Player Manager
+# Player Manager
 
 Player Manager is a single page application that allows users to manage a team of players and provide tactics for each game:
 
-Installation
+# Installation
 
 To install first fork and launch the backend API:
 
 (https://github.com/Kanu-E/backend-football-manager-project)
 
-bundle install
-rails s
+* bundle install
+* rails s
 For the frontend:
 
-fork this repo
-open the index.html file
+* fork this repo
+* open the index.html file
 
 
-License
+# License
 MIT License
 
 Copyright (c) 2020 Emeka Kanu
